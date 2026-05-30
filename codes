@@ -1,0 +1,547 @@
+// //counter app
+// import React,{useState} from 'react'
+
+// function App() {
+//   const [count,setCount]=useState(0);
+//   const inc=()=>{
+//     if(count<10){
+//       setCount(count+1);
+
+//     }
+//   }
+//   const dec=()=>{
+//     if(count>0){
+//       setCount(count-1);
+//     }
+
+//   }
+//   return (
+//     <div>
+//       <h1>Counter-App</h1>
+//       <h2>{count}</h2>
+//       <button onClick={dec}>-</button>
+//       <button onClick={inc}>+</button>
+      
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+// // Disable button
+// import React,{useState} from 'react'
+
+// function App() {
+//   const [disabled,setIsDisabled]=useState(false);
+//   const clicked=()=>{
+//     setIsDisabled(true);
+//   }
+//   return (
+//     <div>
+//       <h1>Disabled-Button</h1>
+//       <button onClick={clicked} disabled={disabled}>yes</button> 
+      
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+
+
+
+
+
+
+
+
+// //DropDown
+// import React,{useState} from 'react'
+
+// function App() {
+//   const courses=["HTML","JS","REACT"];
+//   const [selection,setSelection]=useState("");
+
+//   return (
+//     <div>
+//       <select onChange={(e)=>setSelection(e.target.value)}>
+//         <option value="">Select Courses</option>
+//         {courses.map((course,index)=>(
+//           <option key={index} value={course}>{course}</option>
+//         ))}
+        
+//       </select>
+//       <h2>you selected:{selection}</h2>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// //Background color
+// import React,{useState} from 'react'
+
+// function App() {
+//   const [color,setColor]=useState("white");
+//   const colorChange=()=>{
+//     const colors=[
+//       "Red",
+//       "Pink",
+//       "Blue",
+//       "Black",
+//       "Orange",
+//       "Yellow"
+//     ]
+//     const randomIndex=Math.floor(Math.random()*colors.length);
+//     setColor(colors[randomIndex]);
+//   };
+//   return (
+//     <div style={{backgroundColor:color, height:"100vh"}}>
+//       <button onClick={colorChange}>colorChange</button>
+
+      
+//     </div>
+//   )
+// }
+
+// export default App
+// //hideshow
+// import React,{useState} from 'react'
+
+// function App() {
+//   const [show,setShow]=useState(false);
+//   const clicked=()=>{
+//     setShow(!show);
+//   }
+//   return (
+//     <div>
+//       <input type={show ? "text" : "password"}/>
+//       <button onClick={clicked}>show/hide</button>
+      
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// //inputlivepreviue
+// import React,{useState} from 'react'
+
+// function App() {
+//   const [live,setLive]=useState("");
+//   const show=(e)=>{
+//     setLive(e.target.value);
+//   }
+  
+//   return (
+//     <div>
+//       <input type="text" onChange={show}/>
+//       <h2>{live}</h2>
+      
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+
+
+
+
+
+
+
+
+
+
+// //random quote
+// import React,{useState} from 'react'
+
+// function App() {
+//   const [quote,setQuote]=useState("");
+  
+//   const qoutegenerator=()=>{
+//     const quotes=[
+//      "Believe in yourself.",
+//     "Never give up.",
+//     "Success needs hard work.",
+//     "Dream big and dare to fail.",
+//     "Stay positive and happy."
+
+//   ]
+//   const randomIndex=Math.floor(Math.random()*quotes.length);
+//   setQuote(quotes[randomIndex]);
+
+//   }
+//   return (
+//     <div style={{textAlign:"center",}}>
+//       <h1>Random Quote Generator</h1>
+//       <button onClick={qoutegenerator}>Generate Quote</button>
+//       <h2>{quote}</h2>
+      
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// //characterlimit
+
+
+// import React, { useState } from 'react'
+
+// function App() {
+
+//   const [text, setText] = useState("");
+
+//   const handleChange = (e) => {
+
+    
+//     if (e.target.value.length <= 20) {
+//       setText(e.target.value);
+//     }
+//   };
+
+//   return (
+//     <div style={{ textAlign: "center", marginTop: "100px" }}>
+
+//       <h1>Character Limit Input</h1>
+
+//       <input
+//         type="text"
+//         value={text}
+//         onChange={handleChange}
+//         placeholder="Type here..."
+//       />
+
+//       <p>
+//         Characters: {text.length}/20
+//       </p>
+
+//       {text.length === 20 && (
+//         <p style={{ color: "red" }}>
+//           Character limit reached!
+//         </p>
+//       )}
+
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+
+
+
+
+
+
+
+
+
+
+// //togglestatus
+// function App(){
+//   let [task, setTask] = useState({
+//     title: "Learn React",
+//     completed: false
+//   })
+
+//   let toggle = ()=>{
+//     setTask({
+//       ...task,
+//       completed: !task.completed
+//     })
+//   }
+
+//   return(
+//     <>
+//       <p>{task.title} - {task.completed ? "Completed" : "Pending"}</p>
+//       <button onClick={toggle}>Click</button>
+//     </>
+//   )
+// }
+// export default App
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// //update userlist
+// function App(){
+//   const [users, setUsers] = useState([
+//     { id: 1, name: "A" },
+//     { id: 2, name: "B" }
+//   ]);
+
+//   let chng = ()=>{
+//     setUsers(
+//       users.map((e)=>(
+//         e.id===2 ? {...e, name: "Updated"} : e
+//       ))
+//     )
+//   }
+
+//   return(
+//     <>
+//       <h2>User List</h2>
+//       {users.map((e)=>(
+//         <p key={e.id}>User {e.id}: {e.name}</p>
+//       ))}
+//       <button onClick={chng}>Update User</button>
+//     </>
+//   )
+// }
+// export default App
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// //employfrom with state manage
+// function App(){
+//   let [formData, setFormData] = useState({
+//     name: "",
+//     department: "",
+//     salary: ""
+//   })
+
+//   let [employee, setEmployee] = useState(null)
+
+//   let handleChange = (e)=>{
+//     let name = e.target.name 
+//     let value = e.target.value
+//     setFormData({
+//       ...formData,
+//       [name]: value
+//     })
+//   }
+
+//   let handleSubmit = ()=>{
+//     setEmployee(formData)
+//   }
+
+//   let handleReset = ()=>{
+//     setFormData({
+//       name: "",
+//       department: "",
+//       salary: ""
+//     })
+//     setEmployee(null)
+//   }
+
+//   return(
+//     <>
+//     <form>
+
+//       <input type="text" placeholder="Enter name" name="name" value={formData.name} onChange={handleChange}/><br /><br />
+//       <input type="text" placeholder="Enter department" name="department" value={formData.department} onChange={handleChange}/><br /><br />
+//       <input type="number" placeholder="Enter salary" name="salary" value={formData.salary} onChange={handleChange}/><br /><br />
+//       <button type="button" onClick={handleSubmit}>Submit</button>
+//       <button type="button" onClick={handleReset}>Reset</button>
+//     </form>
+
+//     {employee ?
+//       <div>
+//         <h3>Employee details: </h3>
+//         <p>Name: {employee.name}</p>
+//         <p>Department: {employee.department}</p>
+//         <p>Salary: {employee.salary}</p>
+//       </div>
+//     : ""}
+
+//     </>
+//   )
+// }
+// export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+// //searchfunctionality
+// function App(){
+//   const usersData = [
+//   { id: 1, name: "Amit Sharma", city: "Delhi" },
+//   { id: 2, name: "Neha Verma", city: "Mumbai" },
+//   { id: 3, name: "Rahul Singh", city: "Chandigarh" },
+//   { id: 4, name: "Priya Mehta", city: "Pune" }
+// ];
+//   let [search, setSearch] = useState("")
+//   let [filteredUser, setFilteredUser] = useState(usersData);
+
+//   let handleSearch = (e)=>{
+//     let value = e.target.value;
+//     setSearch(value)
+  
+
+//     let result = usersData.filter((e)=>(
+//       e.name.toLowerCase().includes(value.toLowerCase())
+//     ))
+//     setFilteredUser(result)
+//   }
+//   return(
+//     <>
+//       <h2>User Search</h2>
+//       <input type="text" placeholder="search" onChange={handleSearch}/> <br /><br />
+//       <table border={1} cellSpacing={0} cellPadding={8}>
+//         <thead>
+//           <tr>
+//             <th>ID</th>
+//             <th>Name</th>
+//             <th>City</th>
+//           </tr>
+//         </thead>
+//         <tbody>
+//           {filteredUser.map((e)=>(
+//             <tr key={e.id}>
+//               <td>{e.id}</td>
+//               <td>{e.name}</td>
+//               <td>{e.city}</td>
+//             </tr>
+//           ))}
+//         </tbody>
+//       </table>
+//     </>
+//   )
+// }
+// export default App
+
+
+
+
+
+
+
+
+
+
+
+      
+
+// // product dashboard
+// function App(){
+//   const products = [
+//     { id: 1, name: "Laptop", price: 80000, category: "Premium" },
+//     { id: 2, name: "Mouse", price: 500, category: "Basic" },
+//     { id: 3, name: "Keyboard", price: 1500, category: "Basic" },
+//     { id: 4, name: "Smartphone", price: 60000, category: "Premium" },
+//     { id: 5, name: "Monitor", price: 12000, category: "Deluxe" },
+//     { id: 6, name: "Headphones", price: 3000, category: "Deluxe" }
+//   ];
+
+//   let [category, setCategory] = useState("ALL")
+//   let handleChange = (e)=>{
+//     setCategory(e.target.value)
+//   }
+
+//   let filteredProducts = category === "ALL" ? products : products.filter((product)=>(
+//     product.category === category
+//   ))
+
+//   return(
+//     <>
+//       <select  onChange={handleChange}>
+//         <option>All</option>
+//         <option>Premium</option>
+//         <option>Deluxe</option>
+//         <option>Basic</option>
+//       </select>
+//       <div>
+//         {filteredProducts.map((e)=>(
+//           <div key={e.id}>
+//             <h3>{e.name}</h3>
+//             <p>{e.price}</p>
+//             <span>{e.category}</span>
+//           </div>
+//         ))}
+//       </div>
+//     </>
+//   )
+// }
+// export default App
+
