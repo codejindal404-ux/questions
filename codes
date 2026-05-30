@@ -570,7 +570,7 @@
 
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 import Products from "./Products";
-import Electronics from "./Electronic";
+import Electronic from "./Electronic";
 import Clothing from "./Clothing";
 import Furniture from "./Furniture";
 function App(){
@@ -579,7 +579,7 @@ function App(){
     <Routes>
       <Route path="/Products" element={<Products/>}>
       <Route index element={<h2>Select a Category</h2>}/>
-      <Route path="Electronics"element={<Electronics/>}/>
+      <Route path="Electronic"element={<Electronic/>}/>
       <Route path="Clothing" element={<Clothing/>}/>
       <Route path="Furniture" element={<Furniture/>}/>
 
@@ -625,6 +625,7 @@ function Electronics(){
 }
 export default Electronics;
 
+
 function Furniture() {
   return (
     <div>
@@ -641,8 +642,9 @@ function Furniture() {
 
 export default Furniture;
 
+
 import { Link,Outlet } from "react-router-dom";
-import Electronics from "./Electronic";
+import Electronic from "./Electronic";
 import Clothing from "./Clothing";
 import Furniture from "./Furniture";
 function Products(){
@@ -653,7 +655,7 @@ function Products(){
 
             <nav>
 
-            <Link to="Electronics">Electronics</Link>
+            <Link to="Electronic">Electronics</Link>
             <Link to="Clothing">Clothing</Link>
            <Link to="Furniture">Furniture</Link>
            </nav>
