@@ -545,3 +545,247 @@
 // }
 // export default App
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//router ecommerse
+
+
+import { BrowserRouter,Routes,Route } from "react-router-dom";
+import Products from "./Products";
+import Electronics from "./Electronic";
+import Clothing from "./Clothing";
+import Furniture from "./Furniture";
+function App(){
+  return(
+    <BrowserRouter>
+    <Routes>
+      <Route path="/Products" element={<Products/>}>
+      <Route index element={<h2>Select a Category</h2>}/>
+      <Route path="Electronics"element={<Electronics/>}/>
+      <Route path="Clothing" element={<Clothing/>}/>
+      <Route path="Furniture" element={<Furniture/>}/>
+
+
+
+      </Route>
+
+    </Routes>
+    </BrowserRouter>
+  )
+}
+export default App;
+
+
+function Clothing() {
+  return (
+    <div>
+      <h2>Clothing Products</h2>
+
+      <ul>
+        <li>T-Shirt</li>
+        <li>Jeans</li>
+        <li>Jacket</li>
+      </ul>
+    </div>
+  );
+}
+
+export default Clothing;
+
+function Electronics(){
+    return(
+        <div>
+            <h2>Electronics Products</h2>
+            <ul>
+                <li>Mobiles</li>
+                <li>Laptops</li>
+                <li>Tv</li>
+            </ul>
+        </div>
+    )
+
+}
+export default Electronics;
+
+function Furniture() {
+  return (
+    <div>
+      <h2>Furniture Products</h2>
+
+      <ul>
+        <li>Sofa</li>
+        <li>Chair</li>
+        <li>Table</li>
+      </ul>
+    </div>
+  );
+}
+
+export default Furniture;
+
+import { Link,Outlet } from "react-router-dom";
+import Electronics from "./Electronic";
+import Clothing from "./Clothing";
+import Furniture from "./Furniture";
+function Products(){
+    return(
+        <div>
+            <h1>Products Page</h1>
+
+
+            <nav>
+
+            <Link to="Electronics">Electronics</Link>
+            <Link to="Clothing">Clothing</Link>
+           <Link to="Furniture">Furniture</Link>
+           </nav>
+
+           <Outlet/>
+        </div>
+    );
+}
+export default Products;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Userprofile page dr up
+ap.jsx
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Users from "./Users";
+import UserProfile from "./UserProfile";
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+
+        <Route path="/" element={<Navigate to="/users" />} />
+
+        <Route path="/users" element={<Users />} />
+        <Route path="/users/:id" element={<UserProfile />} />
+
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+export default App;
+
+
+//data.js
+
+const users = [
+  {
+    id: "101",
+    name: "Rahul",
+    email: "rahul@gmail.com",
+    posts: ["Post 1", "Post 2"]
+  },
+  {
+    id: "102",
+    name: "Priya",
+    email: "priya@gmail.com",
+    posts: ["Post A", "Post B"]
+  }
+];
+
+export default users;
+
+
+//UserProfile.jsx
+import { useParams, Link } from "react-router-dom";
+import users from "./data";
+
+function UserProfile() {
+  const { id } = useParams();
+
+  const user = users.find((user) => user.id === id);
+
+  if (!user) {
+    return <h2>User not found</h2>;
+  }
+
+  return (
+    <div>
+      <h1>👤 {user.name}</h1>
+      <p>📧 {user.email}</p>
+
+      <h3>📝 Posts:</h3>
+      <ul>
+        {user.posts.map((post, index) => (
+          <li key={index}>{post}</li>
+        ))}
+      </ul>
+
+      <Link to="/users">⬅ Back to Users</Link>
+    </div>
+  );
+}
+
+export default UserProfile;
+
+
+
+
+//Users.jsx
+import { Link } from "react-router-dom";
+import users from "./data";
+
+function Users() {
+  return (
+    <div>
+      <h1>Users List</h1>
+
+      {users.map((user) => (
+        <div key={user.id}>
+          <Link to={`/users/${user.id}`}>
+            {user.name}
+          </Link>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export default Users;
