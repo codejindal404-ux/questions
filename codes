@@ -524,7 +524,7 @@
 
 //type Script
 //16.Enum for libarary Book Status
-enum BookStatus {
+//enum BookStatus {
 //   Available,
 //   CheckedOut,
 //   Reserved
