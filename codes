@@ -1,4 +1,4 @@
-// //counter app
+ //counter app
 
 // import React,{useState} from 'react'
 
@@ -31,6 +31,8 @@
 
 
 // // Disable button
+
+
 // import React,{useState} from 'react'
 
 // function App() {
@@ -124,7 +126,12 @@
 // }
 
 // export default App
-// //hideshow
+
+
+
+
+ //hideshow
+
 // import React,{useState} from 'react'
 
 // function App() {
@@ -157,7 +164,7 @@
 
 
 
-// //inputlivepreviue
+ //inputlivepreviue
 // import React,{useState} from 'react'
 
 // function App() {
@@ -189,7 +196,7 @@
 
 
 
-// //random quote
+ //random quote
 // import React,{useState} from 'react'
 
 // function App() {
@@ -241,7 +248,7 @@
 
 
 
-// //characterlimit
+ //characterlimit
 
 
 // import React, { useState } from 'react'
@@ -298,7 +305,7 @@
 
 
 
-// //togglestatus
+ //togglestatus
 // function App(){
 //   let [task, setTask] = useState({
 //     title: "Learn React",
@@ -334,7 +341,7 @@
 
 
 
-// //update userlist
+ //update userlist
 // function App(){
 //   const [users, setUsers] = useState([
 //     { id: 1, name: "A" },
@@ -375,7 +382,9 @@
 
 
 
-// //employfrom with state manage
+ //employfrom with state manage
+
+
 // function App(){
 //   let [formData, setFormData] = useState({
 //     name: "",
@@ -444,7 +453,9 @@
 
 
 
-// //searchfunctionality
+//searchfunctionality
+
+
 // function App(){
 //   const usersData = [
 //   { id: 1, name: "Amit Sharma", city: "Delhi" },
@@ -504,7 +515,9 @@
 
       
 
-// // product dashboard
+// product dashboard
+
+
 // function App(){
 //   const products = [
 //     { id: 1, name: "Laptop", price: 80000, category: "Premium" },
@@ -716,7 +729,15 @@ function App() {
 export default App;
 
 
+
+
+
+
+
 //data.js
+
+
+
 
 const users = [
   {
@@ -736,7 +757,12 @@ const users = [
 export default users;
 
 
+
+
+
 //UserProfile.jsx
+
+
 import { useParams, Link } from "react-router-dom";
 import users from "./data";
 
@@ -772,6 +798,10 @@ export default UserProfile;
 
 
 //Users.jsx
+
+
+
+
 import { Link } from "react-router-dom";
 import users from "./data";
 
@@ -827,7 +857,7 @@ enum BookStatus {
   Reserved
 }
 
-// Tuple Definition
+
 type Book = [
   string,      // title
   string,      // author
@@ -835,13 +865,13 @@ type Book = [
   BookStatus   // status
 ];
 
-// Function to borrow book
+
 function borrowBook(book: Book): string {
 
-  // Check current status
+  
   if (book[3] === BookStatus.Available) {
 
-    // Change status
+ 
     book[3] = BookStatus.CheckedOut;
 
     return `You borrowed "${book[0]}" successfully.`;
@@ -858,7 +888,7 @@ function borrowBook(book: Book): string {
   }
 }
 
-// Sample Books
+
 let book1: Book = [
   "Harry Potter",
   "J.K. Rowling",
@@ -873,7 +903,7 @@ let book2: Book = [
   BookStatus.Reserved
 ];
 
-// Function Calls
+
 console.log(borrowBook(book1));
 
 console.log(borrowBook(book1));
@@ -908,7 +938,7 @@ enum SeatType {
   VIP
 }
 
-// Tuple Definition
+
 type Ticket = [
   string,     // movieName
   number,     // seatNumber
@@ -916,18 +946,18 @@ type Ticket = [
   number      // price
 ];
 
-// Function to calculate discount
+
 function calculateDiscount(ticket: Ticket): number {
 
   let finalPrice = ticket[3];
 
-  // Premium Seat → 10% Discount
+ 
   if (ticket[2] === SeatType.Premium) {
 
     finalPrice = finalPrice - (finalPrice * 0.10);
   }
 
-  // VIP Seat → 20% Discount
+ 
   else if (ticket[2] === SeatType.VIP) {
 
     finalPrice = finalPrice - (finalPrice * 0.20);
@@ -936,7 +966,7 @@ function calculateDiscount(ticket: Ticket): number {
   return finalPrice;
 }
 
-// Sample Tickets
+
 let ticket1: Ticket = [
   "Avengers",
   12,
@@ -958,7 +988,7 @@ let ticket3: Ticket = [
   1200
 ];
 
-// Output
+
 console.log("Regular Ticket Price:", calculateDiscount(ticket1));
 
 console.log("Premium Ticket Price:", calculateDiscount(ticket2));
