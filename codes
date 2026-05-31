@@ -1,20 +1,16 @@
- //counter app
-
+//1.counter app
 // import React,{useState} from 'react'
-
 // function App() {
 //   const [count,setCount]=useState(0);
 //   const inc=()=>{
 //     if(count<10){
 //       setCount(count+1);
-
 //     }
 //   }
 //   const dec=()=>{
 //     if(count>0){
 //       setCount(count-1);
 //     }
-
 //   }
 //   return (
 //     <div>
@@ -26,15 +22,11 @@
 //     </div>
 //   )
 // }
-
 // export default App
 
 
-// // Disable button
-
-
+//2.Disable button
 // import React,{useState} from 'react'
-
 // function App() {
 //   const [disabled,setIsDisabled]=useState(false);
 //   const clicked=()=>{
@@ -48,22 +40,11 @@
 //     </div>
 //   )
 // }
-
 // export default App
 
 
-
-
-
-
-
-
-
-
-
-// //DropDown
+//3.DropDown
 // import React,{useState} from 'react'
-
 // function App() {
 //   const courses=["HTML","JS","REACT"];
 //   const [selection,setSelection]=useState("");
@@ -81,27 +62,11 @@
 //     </div>
 //   )
 // }
-
 // export default App
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// //Background color
+//4.Background color
 // import React,{useState} from 'react'
-
 // function App() {
 //   const [color,setColor]=useState("white");
 //   const colorChange=()=>{
@@ -119,21 +84,14 @@
 //   return (
 //     <div style={{backgroundColor:color, height:"100vh"}}>
 //       <button onClick={colorChange}>colorChange</button>
-
-      
 //     </div>
 //   )
 // }
-
 // export default App
 
 
-
-
- //hideshow
-
+//5.hideshow
 // import React,{useState} from 'react'
-
 // function App() {
 //   const [show,setShow]=useState(false);
 //   const clicked=()=>{
@@ -147,32 +105,16 @@
 //     </div>
 //   )
 // }
-
 // export default App
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
- //inputlivepreviue
+//6.inputlivepreviue
 // import React,{useState} from 'react'
-
 // function App() {
 //   const [live,setLive]=useState("");
 //   const show=(e)=>{
 //     setLive(e.target.value);
 //   }
-  
 //   return (
 //     <div>
 //       <input type="text" onChange={show}/>
@@ -181,27 +123,13 @@
 //     </div>
 //   )
 // }
-
 // export default App
 
 
-
-
-
-
-
-
-
-
-
-
-
- //random quote
+//7.random quote
 // import React,{useState} from 'react'
-
 // function App() {
 //   const [quote,setQuote]=useState("");
-  
 //   const qoutegenerator=()=>{
 //     const quotes=[
 //      "Believe in yourself.",
@@ -209,11 +137,9 @@
 //     "Success needs hard work.",
 //     "Dream big and dare to fail.",
 //     "Stay positive and happy."
-
 //   ]
 //   const randomIndex=Math.floor(Math.random()*quotes.length);
 //   setQuote(quotes[randomIndex]);
-
 //   }
 //   return (
 //     <div style={{textAlign:"center",}}>
@@ -224,88 +150,42 @@
 //     </div>
 //   )
 // }
-
 // export default App
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- //characterlimit
-
-
+//8.characterlimit
 // import React, { useState } from 'react'
-
 // function App() {
-
 //   const [text, setText] = useState("");
-
 //   const handleChange = (e) => {
-
-    
 //     if (e.target.value.length <= 20) {
 //       setText(e.target.value);
 //     }
 //   };
-
 //   return (
 //     <div style={{ textAlign: "center", marginTop: "100px" }}>
-
 //       <h1>Character Limit Input</h1>
-
 //       <input
 //         type="text"
 //         value={text}
 //         onChange={handleChange}
 //         placeholder="Type here..."
 //       />
-
 //       <p>
 //         Characters: {text.length}/20
 //       </p>
-
 //       {text.length === 20 && (
 //         <p style={{ color: "red" }}>
 //           Character limit reached!
 //         </p>
 //       )}
-
 //     </div>
 //   )
 // }
-
 // export default App
 
 
-
-
-
-
-
-
-
-
-
-
-
- //togglestatus
+//9.togglestatus
 // function App(){
 //   let [task, setTask] = useState({
 //     title: "Learn React",
@@ -329,19 +209,7 @@
 // export default App
 
 
-
-
-
-
-
-
-
-
-
-
-
-
- //update userlist
+//10.update userlist
 // function App(){
 //   const [users, setUsers] = useState([
 //     { id: 1, name: "A" },
@@ -369,22 +237,7 @@
 // export default App
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
- //employfrom with state manage
-
-
+//11.employfrom with state manage
 // function App(){
 //   let [formData, setFormData] = useState({
 //     name: "",
@@ -442,20 +295,7 @@
 // export default App;
 
 
-
-
-
-
-
-
-
-
-
-
-
-//searchfunctionality
-
-
+//12.searchfunctionality
 // function App(){
 //   const usersData = [
 //   { id: 1, name: "Amit Sharma", city: "Delhi" },
@@ -465,12 +305,9 @@
 // ];
 //   let [search, setSearch] = useState("")
 //   let [filteredUser, setFilteredUser] = useState(usersData);
-
 //   let handleSearch = (e)=>{
 //     let value = e.target.value;
 //     setSearch(value)
-  
-
 //     let result = usersData.filter((e)=>(
 //       e.name.toLowerCase().includes(value.toLowerCase())
 //     ))
@@ -504,20 +341,7 @@
 // export default App
 
 
-
-
-
-
-
-
-
-
-
-      
-
-// product dashboard
-
-
+//13.product dashboard
 // function App(){
 //   const products = [
 //     { id: 1, name: "Laptop", price: 80000, category: "Premium" },
@@ -527,16 +351,13 @@
 //     { id: 5, name: "Monitor", price: 12000, category: "Deluxe" },
 //     { id: 6, name: "Headphones", price: 3000, category: "Deluxe" }
 //   ];
-
 //   let [category, setCategory] = useState("ALL")
 //   let handleChange = (e)=>{
 //     setCategory(e.target.value)
 //   }
-
 //   let filteredProducts = category === "ALL" ? products : products.filter((product)=>(
 //     product.category === category
 //   ))
-
 //   return(
 //     <>
 //       <select  onChange={handleChange}>
@@ -560,604 +381,635 @@
 // export default App
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//router ecommerse
-
-
+//14.router ecommerse
 import { BrowserRouter,Routes,Route } from "react-router-dom";
-import Products from "./Products";
-import Electronic from "./Electronic";
-import Clothing from "./Clothing";
-import Furniture from "./Furniture";
-function App(){
-  return(
-    <BrowserRouter>
-    <Routes>
-      <Route path="/Products" element={<Products/>}>
-      <Route index element={<h2>Select a Category</h2>}/>
-      <Route path="Electronic"element={<Electronic/>}/>
-      <Route path="Clothing" element={<Clothing/>}/>
-      <Route path="Furniture" element={<Furniture/>}/>
-
-
-
-      </Route>
-
-    </Routes>
-    </BrowserRouter>
-  )
-}
-export default App;
-
-
-function Clothing() {
-  return (
-    <div>
-      <h2>Clothing Products</h2>
-
-      <ul>
-        <li>T-Shirt</li>
-        <li>Jeans</li>
-        <li>Jacket</li>
-      </ul>
-    </div>
-  );
-}
-
-export default Clothing;
-
-function Electronics(){
-    return(
-        <div>
-            <h2>Electronics Products</h2>
-            <ul>
-                <li>Mobiles</li>
-                <li>Laptops</li>
-                <li>Tv</li>
-            </ul>
-        </div>
-    )
-
-}
-export default Electronics;
-
-
-function Furniture() {
-  return (
-    <div>
-      <h2>Furniture Products</h2>
-
-      <ul>
-        <li>Sofa</li>
-        <li>Chair</li>
-        <li>Table</li>
-      </ul>
-    </div>
-  );
-}
-
-export default Furniture;
-
-
-import { Link,Outlet } from "react-router-dom";
-import Electronic from "./Electronic";
-import Clothing from "./Clothing";
-import Furniture from "./Furniture";
-function Products(){
-    return(
-        <div>
-            <h1>Products Page</h1>
-
-
-            <nav>
-
-            <Link to="Electronic">Electronics</Link>
-            <Link to="Clothing">Clothing</Link>
-           <Link to="Furniture">Furniture</Link>
-           </nav>
-
-           <Outlet/>
-        </div>
-    );
-}
-export default Products;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//Userprofile page dr up
-ap.jsx
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Users from "./Users";
-import UserProfile from "./UserProfile";
-
-function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-
-        <Route path="/" element={<Navigate to="/users" />} />
-
-        <Route path="/users" element={<Users />} />
-        <Route path="/users/:id" element={<UserProfile />} />
-
-      </Routes>
-    </BrowserRouter>
-  );
-}
-
-export default App;
-
-
-
-
-
-
-
-//data.js
-
-
-
-
-const users = [
-  {
-    id: "101",
-    name: "Rahul",
-    email: "rahul@gmail.com",
-    posts: ["Post 1", "Post 2"]
-  },
-  {
-    id: "102",
-    name: "Priya",
-    email: "priya@gmail.com",
-    posts: ["Post A", "Post B"]
-  }
-];
-
-export default users;
-
-
-
-
-
-//UserProfile.jsx
-
-
-import { useParams, Link } from "react-router-dom";
-import users from "./data";
-
-function UserProfile() {
-  const { id } = useParams();
-
-  const user = users.find((user) => user.id === id);
-
-  if (!user) {
-    return <h2>User not found</h2>;
-  }
-
-  return (
-    <div>
-      <h1>👤 {user.name}</h1>
-      <p>📧 {user.email}</p>
-
-      <h3>📝 Posts:</h3>
-      <ul>
-        {user.posts.map((post, index) => (
-          <li key={index}>{post}</li>
-        ))}
-      </ul>
-
-      <Link to="/users">⬅ Back to Users</Link>
-    </div>
-  );
-}
-
-export default UserProfile;
-
-
-
-
-//Users.jsx
-
-
-
-
-import { Link } from "react-router-dom";
-import users from "./data";
-
-function Users() {
-  return (
-    <div>
-      <h1>Users List</h1>
-
-      {users.map((user) => (
-        <div key={user.id}>
-          <Link to={`/users/${user.id}`}>
-            {user.name}
-          </Link>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-export default Users;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// import Products from "./Products";
+// import Electronic from "./Electronic";
+// import Clothing from "./Clothing";
+// import Furniture from "./Furniture";
+// function App(){
+//   return(
+//     <BrowserRouter>
+//     <Routes>
+//       <Route path="/Products" element={<Products/>}>
+//       <Route index element={<h2>Select a Category</h2>}/>
+//       <Route path="Electronic"element={<Electronic/>}/>
+//       <Route path="Clothing" element={<Clothing/>}/>
+//       <Route path="Furniture" element={<Furniture/>}/>
+//      </Route>
+// </Routes>
+//     </BrowserRouter>
+//   )
+// }
+// export default App;
+// function Clothing() {
+//   return (
+//     <div>
+//       <h2>Clothing Products</h2>
+
+//       <ul>
+//         <li>T-Shirt</li>
+//         <li>Jeans</li>
+//         <li>Jacket</li>
+//       </ul>
+//     </div>
+//   );
+// }
+// export default Clothing;
+// function Electronics(){
+//     return(
+//         <div>
+//             <h2>Electronics Products</h2>
+//             <ul>
+//                 <li>Mobiles</li>
+//                 <li>Laptops</li>
+//                 <li>Tv</li>
+//             </ul>
+//         </div>
+//     )
+
+// }
+// export default Electronics;
+// function Furniture() {
+//   return (
+//     <div>
+//       <h2>Furniture Products</h2>
+
+//       <ul>
+//         <li>Sofa</li>
+//         <li>Chair</li>
+//         <li>Table</li>
+//       </ul>
+//     </div>
+//   );
+// }
+// export default Furniture;
+// import { Link,Outlet } from "react-router-dom";
+// import Electronic from "./Electronic";
+// import Clothing from "./Clothing";
+// import Furniture from "./Furniture";
+// function Products(){
+//     return(
+//         <div>
+//             <h1>Products Page</h1>
+//            <nav>
+//             <Link to="Electronic">Electronics</Link>
+//             <Link to="Clothing">Clothing</Link>
+//            <Link to="Furniture">Furniture</Link>
+//            </nav>
+//          <Outlet/>
+//         </div>
+//     );
+// }
+// export default Products;
+
+
+//15.Userprofile page dr up
+
+
+
+// ap.jsx
+// import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+// import Users from "./Users";
+// import UserProfile from "./UserProfile";
+
+// function App() {
+//   return (
+//     <BrowserRouter>
+//       <Routes>
+//         <Route path="/" element={<Navigate to="/users" />} />
+//         <Route path="/users" element={<Users />} />
+//         <Route path="/users/:id" element={<UserProfile />} />
+//        </Routes>
+//     </BrowserRouter>
+//   );
+// }
+// export default App;
+// //data.js
+// const users = [
+//   {
+//     id: "101",
+//     name: "Rahul",
+//     email: "rahul@gmail.com",
+//     posts: ["Post 1", "Post 2"]
+//   },
+//   {
+//     id: "102",
+//     name: "Priya",
+//     email: "priya@gmail.com",
+//     posts: ["Post A", "Post B"]
+//   }
+// ];
+// export default users;
+// //UserProfile.jsx
+// import { useParams, Link } from "react-router-dom";
+// import users from "./data";
+// function UserProfile() {
+//   const { id } = useParams();
+// const user = users.find((user) => user.id === id);
+// if (!user) {
+//     return <h2>User not found</h2>;
+//   }
+// return (
+//     <div>
+//       <h1> {user.name}</h1>
+//       <p>{user.email}</p>
+//       <h3>Posts:</h3>
+//       <ul>
+//         {user.posts.map((post, index) => (
+//           <li key={index}>{post}</li>
+//         ))}
+//       </ul>
+// <Link to="/users">⬅ Back to Users</Link>
+//     </div>
+//   );
+// }
+// export default UserProfile;
+// //Users.jsx
+// import { Link } from "react-router-dom";
+// import users from "./data";
+
+// function Users() {
+//   return (
+//     <div>
+//       <h1>Users List</h1>
+
+//       {users.map((user) => (
+//         <div key={user.id}>
+//           <Link to={`/users/${user.id}`}>
+//             {user.name}
+//           </Link>
+//         </div>
+//       ))}
+//     </div>
+//   );
+// }
+// export default Users;
 
 
 //type Script
-
-
-
-// Enum for Book Status
+//16.Enum for libarary Book Status
 enum BookStatus {
-  Available,
-  CheckedOut,
-  Reserved
-}
+//   Available,
+//   CheckedOut,
+//   Reserved
+// }
+// type Book = [
+//   string,      
+//   string,       
+//   number,      
+//   BookStatus   
+// ];
+// function borrowBook(book: Book): string {
+// if (book[3] === BookStatus.Available) {
+// book[3] = BookStatus.CheckedOut;
+// return `You borrowed "${book[0]}" successfully.`;
+//   }
+// else if (book[3] === BookStatus.CheckedOut) {
+//      return `"${book[0]}" is already checked out.`;
+//   }
+// else {
+// return `"${book[0]}" is reserved and cannot be borrowed.`;
+//   }
+// }
+// let book1: Book = [
+//   "Harry Potter",
+//   "J.K. Rowling",
+//   12345,
+//   BookStatus.Available
+// ];
+// let book2: Book = [
+//   "Atomic Habits",
+//   "James Clear",
+//   67890,
+//   BookStatus.Reserved
+// ];
+// console.log(borrowBook(book1));
+// console.log(borrowBook(book1));
+// console.log(borrowBook(book2));
 
 
-type Book = [
-  string,      // title
-  string,      // author
-  number,      // isbn
-  BookStatus   // status
-];
-
-
-function borrowBook(book: Book): string {
-
-  
-  if (book[3] === BookStatus.Available) {
-
- 
-    book[3] = BookStatus.CheckedOut;
-
-    return `You borrowed "${book[0]}" successfully.`;
-  }
-
-  else if (book[3] === BookStatus.CheckedOut) {
-
-    return `"${book[0]}" is already checked out.`;
-  }
-
-  else {
-
-    return `"${book[0]}" is reserved and cannot be borrowed.`;
-  }
-}
-
-
-let book1: Book = [
-  "Harry Potter",
-  "J.K. Rowling",
-  12345,
-  BookStatus.Available
-];
-
-let book2: Book = [
-  "Atomic Habits",
-  "James Clear",
-  67890,
-  BookStatus.Reserved
-];
-
-
-console.log(borrowBook(book1));
-
-console.log(borrowBook(book1));
-
-console.log(borrowBook(book2));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Enum for Seat Types
-
-
-
+//17.Enum for Seat Types
 enum SeatType {
-  Regular,
-  Premium,
-  VIP
-}
+//   Regular,
+//   Premium,
+//   VIP
+// }
+// type Ticket = [
+//   string,     
+//   number,     
+//   SeatType,   
+//   number      
+// ];
+// function calculateDiscount(ticket: Ticket): number {
+// let finalPrice = ticket[3];
+// if (ticket[2] === SeatType.Premium) {
+// finalPrice = finalPrice - (finalPrice * 0.10);
+//   }
+// else if (ticket[2] === SeatType.VIP) {
+// finalPrice = finalPrice - (finalPrice * 0.20);
+//   }
+// return finalPrice;
+// }
+// let ticket1: Ticket = [
+//   "Avengers",
+//   12,
+//   SeatType.Regular,
+//   500
+// ];
+// let ticket2: Ticket = [
+//   "Batman",
+//   7,
+//   SeatType.Premium,
+//   800
+// ];
+// let ticket3: Ticket = [
+//   "Interstellar",
+//   1,
+//   SeatType.VIP,
+//   1200
+// ];
+// console.log("Regular Ticket Price:", calculateDiscount(ticket1));
+// console.log("Premium Ticket Price:", calculateDiscount(ticket2));
+// console.log("VIP Ticket Price:", calculateDiscount(ticket3));
 
 
-type Ticket = [
-  string,     // movieName
-  number,     // seatNumber
-  SeatType,   // seatType
-  number      // price
-];
-
-
-function calculateDiscount(ticket: Ticket): number {
-
-  let finalPrice = ticket[3];
-
- 
-  if (ticket[2] === SeatType.Premium) {
-
-    finalPrice = finalPrice - (finalPrice * 0.10);
-  }
-
- 
-  else if (ticket[2] === SeatType.VIP) {
-
-    finalPrice = finalPrice - (finalPrice * 0.20);
-  }
-
-  return finalPrice;
-}
-
-
-let ticket1: Ticket = [
-  "Avengers",
-  12,
-  SeatType.Regular,
-  500
-];
-
-let ticket2: Ticket = [
-  "Batman",
-  7,
-  SeatType.Premium,
-  800
-];
-
-let ticket3: Ticket = [
-  "Interstellar",
-  1,
-  SeatType.VIP,
-  1200
-];
-
-
-console.log("Regular Ticket Price:", calculateDiscount(ticket1));
-
-console.log("Premium Ticket Price:", calculateDiscount(ticket2));
-
-console.log("VIP Ticket Price:", calculateDiscount(ticket3));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//fetch ecommerce
-
-
+//18.fetch ecommerce
 import { useEffect, useState } from "react";
-import ProductTable from "./components/ProductTable";
+// import ProductTable from "./components/ProductTable";
+// function App() {
+//   const [products, setProducts] = useState([]);
+//   const [error, setError] = useState("");
+//   const [sortOption, setSortOption] = useState("");
+//     useEffect(() => {
+//     fetch("https://fakestoreapi.com/products")
+//       .then((response) => response.json())
+//        .then((data) => {
+//         setProducts(data);
+//       })
+//       .catch(() => {
+//         setError("Failed to load products.");
+//       });
+// }, []);
+// const handleSort = (e) => {
+// const option = e.target.value;
+// setSortOption(option);
+// let sortedProducts = [...products];
+//     if (option === "lowToHigh") {
+//       sortedProducts.sort((a, b) => a.price - b.price);
+//     }
+//     else if (option === "highToLow") {
+//       sortedProducts.sort((a, b) => b.price - a.price);
+//     }
+//     setProducts(sortedProducts);
+//   };
+//   return (
+//     <div>
+//       <h1>E-commerce Product Dashboard</h1>
+//       <select onChange={handleSort} value={sortOption}>
+//         <option value="">Select Sorting</option>
+//         <option value="lowToHigh">
+//           Price (Low → High)
+//         </option>
+//         <option value="highToLow">
+//           Price (High → Low)
+//         </option>
+//       </select>
+//       <br />
+//       <br />
+//       {/* Error Message */}
+//       {error && <h2>{error}</h2>}
+//       {/* Pass Data Using Props */}
+//       {!error && (
+//         <ProductTable products={products} />
+//       )}
+//     </div>
+//   );
+// }
+// export default App;
+// function ProductTable({ products }) {
+//   return (
+//     <table border="1" cellPadding="10">
+//       <thead>
+//         <tr>
+//           <th>ID</th>
+//           <th>Product Name</th>
+//           <th>Price</th>
+//           <th>Category</th>
+//           <th>Rating</th>
+//           <th>Product Image</th>
+//         </tr>
+//       </thead>
+//       <tbody>
+//         {products.map((product) => (
+//           <tr key={product.id}>
+//             <td>{product.id}</td>
+//             <td>{product.title}</td>
+//             <td>${product.price}</td>
+//             <td>{product.category}</td>
+//             <td>{product.rating.rate}</td>
+//             <td>
+//               <img
+//                 src={product.image}
+//                 alt={product.title}
+//                 width="80"
+//               />
+//             </td>
+//           </tr>
+//         ))}
+//       </tbody>
+//     </table>
+//   );
+// }
+// export default ProductTable;
 
-function App() {
 
-  const [products, setProducts] = useState([]);
-  const [error, setError] = useState("");
-  const [sortOption, setSortOption] = useState("");
-
-  
-  useEffect(() => {
-
-    fetch("https://fakestoreapi.com/products")
-
-      .then((response) => response.json())
-
-      .then((data) => {
-        setProducts(data);
-      })
-
-      .catch(() => {
-        setError("Failed to load products.");
-      });
-
-  }, []);
-
-  
-  const handleSort = (e) => {
-
-    const option = e.target.value;
-
-    setSortOption(option);
-
-    let sortedProducts = [...products];
-
-    if (option === "lowToHigh") {
-
-      sortedProducts.sort((a, b) => a.price - b.price);
-    }
-
-    else if (option === "highToLow") {
-
-      sortedProducts.sort((a, b) => b.price - a.price);
-    }
-
-    setProducts(sortedProducts);
-  };
-
-  return (
-
-    <div>
-
-      <h1>E-commerce Product Dashboard</h1>
-
-      
-
-      <select onChange={handleSort} value={sortOption}>
-
-        <option value="">Select Sorting</option>
-
-        <option value="lowToHigh">
-          Price (Low → High)
-        </option>
-
-        <option value="highToLow">
-          Price (High → Low)
-        </option>
-
-      </select>
-
-      <br />
-      <br />
-
-      {/* Error Message */}
-
-      {error && <h2>{error}</h2>}
-
-      {/* Pass Data Using Props */}
-
-      {!error && (
-        <ProductTable products={products} />
-      )}
-
-    </div>
-  );
-}
-
-export default App;
+//19.password-validator
+import { useState } from "react";
+// function App() {
+//   const [password, setPassword] = useState("");
+//   const firstCapital = /^[A-Z]/.test(password);
+//   const hasLowerCase = /[a-z]/.test(password);
+//   const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+//   const hasNumber = /[0-9]/.test(password);
+//   return (
+//     <div style={{ padding: "30px", fontFamily: "Arial" }}>
+//       <h1>Password Validator</h1>
+//       <input
+//         type="password"
+//         placeholder="Enter Password"
+//         value={password}
+//         onChange={(e) => setPassword(e.target.value)}
+//         style={{
+//           padding: "10px",
+//           width: "300px",
+//           fontSize: "16px",
+//         }}
+//       />
+//       <div style={{ marginTop: "20px" }}>
+//         <p style={{ color: firstCapital ? "green" : "red" }}>
+//           First character should be capital letter
+//         </p>
+//         <p style={{ color: hasLowerCase ? "green" : "red" }}>
+//           Password should contain lowercase letter
+//         </p>
+//         <p style={{ color: hasSpecialChar ? "green" : "red" }}>
+//           Password should contain special character
+//         </p>
+//         <p style={{ color: hasNumber ? "green" : "red" }}>
+//           Password should contain number
+//         </p>
+//       </div>
+//     </div>
+//   );
+// }
+// export default App;
 
 
-function ProductTable({ products }) {
+//20.image-slider
+import { useState } from "react";
 
-  return (
+// function App() {
+//   const images = [
+//     "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
+//     "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+//     "https://images.unsplash.com/photo-1493246507139-91e8fad9978e",
+//     "https://images.unsplash.com/photo-1519125323398-675f0ddb6308"
+//   ];
+//   const [currentIndex, setCurrentIndex] = useState(0);
+//   
+//   const nextImage = () => {
+//     setCurrentIndex((prevIndex) =>
+//       prevIndex === images.length - 1 ? 0 : prevIndex + 1
+//     );
+//   };
+//   // Previous Image
+//   const prevImage = () => {
+//     setCurrentIndex((prevIndex) =>
+//       prevIndex === 0 ? images.length - 1 : prevIndex - 1
+//     );
+//   };
+//   return (
+//     <div
+//       style={{
+//         textAlign: "center",
+//         marginTop: "40px",
+//         fontFamily: "Arial"
+//       }}
+//     >
+//       <h1>Image Slider</h1>
+//       <img
+//         src={images[currentIndex]}
+//         alt="slider"
+//         style={{
+//           width: "600px",
+//           height: "400px",
+//           objectFit: "cover",
+//           borderRadius: "10px"
+//         }}
+//       />
+//       <div style={{ marginTop: "20px" }}>
+//         <button
+//           onClick={prevImage}
+//           style={{
+//             padding: "10px 20px",
+//             marginRight: "10px",
+//             fontSize: "16px"
+//           }}
+//         >
+//           Previous
+//         </button>
+//         <button
+//           onClick={nextImage}
+//           style={{
+//             padding: "10px 20px",
+//             fontSize: "16px"
+//           }}
+//         >
+//           Next
+//         </button>
+//       </div>
+//     </div>
+//   );
+// }
+// export default App;
 
-    <table border="1" cellPadding="10">
 
-      <thead>
+//21.productdropdown viewer
+import { useEffect, useState } from "react";
+// function App() {
+//   const [products, setProducts] = useState([]);
+//   const [selectedProduct, setSelectedProduct] = useState("");
+//   useEffect(() => {
+//     fetch("https://fakestoreapi.com/products")
+//       .then((response) => response.json())
+//       .then((data) => setProducts(data))
+//       .catch((error) => console.log(error));
+//   }, []);
+//   const handleChange = (e) => {
+//     const productId = e.target.value;
+//     const product = products.find(
+//       (item) => item.id === Number(productId)
+//     );
+//     setSelectedProduct(product);
+//   };
+//   return (
+//     <div
+//       style={{
+//         padding: "20px",
+//         fontFamily: "Arial"
+//       }}
+//     >
+//       <h1>Product Dropdown Viewer</h1>
+//       <select onChange={handleChange}>
+//         <option value="">Select Product</option>
+//         {products.map((product) => (
+//           <option key={product.id} value={product.id}>
+//             {product.title}
+//           </option>
+//         ))}
+//       </select>
+//       <hr />
+//       {selectedProduct ? (
+//         <div>
+//           <img
+//             src={selectedProduct.image}
+//             alt={selectedProduct.title}
+//             width="200"
+//           />
+//           <h2>{selectedProduct.title}</h2>
+//           <h3>Category: {selectedProduct.category}</h3>
+//           <h3>Price: ${selectedProduct.price}</h3>
+//           <p>{selectedProduct.description}</p>
+//         </div>
+//       ) : (
+//         <h2>Select a product to view details</h2>
+//       )}
+//     </div>
+//   );
+// }
+// export default App;
 
-        <tr>
 
-          <th>ID</th>
-          <th>Product Name</th>
-          <th>Price</th>
-          <th>Category</th>
-          <th>Rating</th>
-          <th>Product Image</th>
+//22.product-filter
+// import { useState } from "react";
+// function App() {
+//   const products = [
+//     {
+//       id: 1,
+//       name: "Laptop",
+//       category: "Electronics",
+//       price: 50000
+//     },
+//     {
+//       id: 2,
+//       name: "T-Shirt",
+//       category: "Clothing",
+//       price: 1200
+//     },
+//     {
+//       id: 3,
+//       name: "Mobile",
+//       category: "Electronics",
+//       price: 30000
+//     },
+//     {
+//       id: 4,
+//       name: "Jeans",
+//       category: "Clothing",
+//       price: 2000
+//     }
+//   ];
+//   const [electronics, setElectronics] = useState(false);
+//   const [clothing, setClothing] = useState(false);
+//   const filteredProducts = products.filter((product) => {
+//     if (!electronics && !clothing) {
+//       return true;
+//     }
+//     if (electronics && product.category === "Electronics") {
+//       return true;
+//     }
+//     if (clothing && product.category === "Clothing") {
+//       return true;
+//     }
+//     return false;
+//   });
+//   return (
+//     <div style={{ padding: "20px", fontFamily: "Arial" }}>
+//       <h1>Product Category Filter</h1>
+//       <label>
+//         <input
+//           type="checkbox"
+//           checked={electronics}
+//           onChange={() => setElectronics(!electronics)}
+//         />
+//         Electronics
+//       </label>
+//       <br />
+//       <br />
+//       <label>
+//         <input
+//           type="checkbox"
+//           checked={clothing}
+//           onChange={() => setClothing(!clothing)}
+//         />
+//         Clothing
+//       </label>
+//       <br />
+//       <br />
+//       <table border="1" cellPadding="10">
+//         <thead>
+//           <tr>
+//             <th>ID</th>
+//             <th>Product Name</th>
+//             <th>Category</th>
+//             <th>Price</th>
+//           </tr>
+//         </thead>
+//         <tbody>
+//           {filteredProducts.map((product) => (
+//             <tr key={product.id}>
+//               <td>{product.id}</td>
+//               <td>{product.name}</td>
+//               <td>{product.category}</td>
+//               <td>₹{product.price}</td>
+//             </tr>
+//           ))}
+//         </tbody>
+//       </table>
+//     </div>
+//   );
+// }
+// export default App;
 
-        </tr>
 
-      </thead>
+//23.student dropdown
+//function App() {
+//   const students = [
+//     { id: 1, name: "Amit" },
+//     { id: 2, name: "Riya" },
+//     { id: 3, name: "John" },
+//     { id: 4, name: "Sneha" }
+//   ];
+//   return (
+//     <div style={{ padding: "20px" }}>
+//       <h1>Student Dropdown</h1>
+//       <select>
+//         <option>Select Student</option>
+//         {students.map((student) => (
+//           <option key={student.id}>
+//             {student.name}
+//           </option>
+//         ))}
+//       </select>
+//     </div>
+//   );
+// }
+// export default App;
 
-      <tbody>
 
-        {products.map((product) => (
 
-          <tr key={product.id}>
 
-            <td>{product.id}</td>
 
-            <td>{product.title}</td>
 
-            <td>${product.price}</td>
-
-            <td>{product.category}</td>
-
-            <td>{product.rating.rate}</td>
-
-            <td>
-
-              <img
-                src={product.image}
-                alt={product.title}
-                width="80"
-              />
-
-            </td>
-
-          </tr>
-
-        ))}
-
-      </tbody>
-
-    </table>
-
-  );
-}
-
-export default ProductTable;
 
