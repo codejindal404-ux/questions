@@ -1,4 +1,5 @@
 // //counter app
+
 // import React,{useState} from 'react'
 
 // function App() {
@@ -791,3 +792,175 @@ function Users() {
 }
 
 export default Users;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//type Script
+
+
+
+// Enum for Book Status
+enum BookStatus {
+  Available,
+  CheckedOut,
+  Reserved
+}
+
+// Tuple Definition
+type Book = [
+  string,      // title
+  string,      // author
+  number,      // isbn
+  BookStatus   // status
+];
+
+// Function to borrow book
+function borrowBook(book: Book): string {
+
+  // Check current status
+  if (book[3] === BookStatus.Available) {
+
+    // Change status
+    book[3] = BookStatus.CheckedOut;
+
+    return `You borrowed "${book[0]}" successfully.`;
+  }
+
+  else if (book[3] === BookStatus.CheckedOut) {
+
+    return `"${book[0]}" is already checked out.`;
+  }
+
+  else {
+
+    return `"${book[0]}" is reserved and cannot be borrowed.`;
+  }
+}
+
+// Sample Books
+let book1: Book = [
+  "Harry Potter",
+  "J.K. Rowling",
+  12345,
+  BookStatus.Available
+];
+
+let book2: Book = [
+  "Atomic Habits",
+  "James Clear",
+  67890,
+  BookStatus.Reserved
+];
+
+// Function Calls
+console.log(borrowBook(book1));
+
+console.log(borrowBook(book1));
+
+console.log(borrowBook(book2));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Enum for Seat Types
+
+
+
+enum SeatType {
+  Regular,
+  Premium,
+  VIP
+}
+
+// Tuple Definition
+type Ticket = [
+  string,     // movieName
+  number,     // seatNumber
+  SeatType,   // seatType
+  number      // price
+];
+
+// Function to calculate discount
+function calculateDiscount(ticket: Ticket): number {
+
+  let finalPrice = ticket[3];
+
+  // Premium Seat → 10% Discount
+  if (ticket[2] === SeatType.Premium) {
+
+    finalPrice = finalPrice - (finalPrice * 0.10);
+  }
+
+  // VIP Seat → 20% Discount
+  else if (ticket[2] === SeatType.VIP) {
+
+    finalPrice = finalPrice - (finalPrice * 0.20);
+  }
+
+  return finalPrice;
+}
+
+// Sample Tickets
+let ticket1: Ticket = [
+  "Avengers",
+  12,
+  SeatType.Regular,
+  500
+];
+
+let ticket2: Ticket = [
+  "Batman",
+  7,
+  SeatType.Premium,
+  800
+];
+
+let ticket3: Ticket = [
+  "Interstellar",
+  1,
+  SeatType.VIP,
+  1200
+];
+
+// Output
+console.log("Regular Ticket Price:", calculateDiscount(ticket1));
+
+console.log("Premium Ticket Price:", calculateDiscount(ticket2));
+
+console.log("VIP Ticket Price:", calculateDiscount(ticket3));
